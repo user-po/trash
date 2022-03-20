@@ -1,0 +1,26 @@
+.container {
+    padding-bottom: 200rpx;
+    overflow: hidden;
+
+}
+.avatar{
+    position: relative;
+}
+
+.header {
+    box-sizing: border-box;
+    height: 350rpx;
+    background: #31b977;
+    padding: 30rpx;
+}
+.header-middle{
+    margin-top: -3rpx;
+}
+
+.main {
+    padding: 0rpx 30rpx;
+}
+
+.grid-container {
+    margin-top: 30rpx;
+}

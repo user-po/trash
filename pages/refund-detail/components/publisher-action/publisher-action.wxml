@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="button" wx:if="{{status === RefundStatus.UNAPPROVED}}">
+        <i-button size="long" shape="circle"
+                  bind:tap="handleAction"
+                  data-status="{{refundAction.AGREE}}">同意退款
+        </i-button>
+        <i-button size="long" shape="circle"
+                  bgColor="red" fontColor="#fff"
+                  bind:tap="handleAction"
+                  data-status="{{refundAction.DENY}}">拒绝
+        </i-button>
+    </view>
+</view>

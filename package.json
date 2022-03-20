@@ -1,0 +1,24 @@
+{
+  "name": "homemaking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.10.2",
+    "gcoord": "^0.3.2",
+    "mobx-miniprogram": "4.13.2",
+    "mobx-miniprogram-bindings": "2.0.0",
+    "mp-html": "^2.2.2",
+    "tim-upload-plugin": "^1.0.4",
+    "tim-wx-sdk-ws": "^2.12.0",
+    "wx-minicomponent": "^1.2.0"
+  }
+}

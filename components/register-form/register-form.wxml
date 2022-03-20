@@ -1,0 +1,69 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<mp-form  id="form" models="{{formData}}" rules="{{rules}}">
+    <mp-cells>
+        <mp-cell show-error prop="name" title="真实姓名：">
+            <input
+                    value="{{formData.name}}"
+                   
+                    bindinput="handleInput"
+                    data-field="name">
+            </input>
+        </mp-cell>
+        <mp-cell show-error prop="phone" title="联系方式：">
+          <input
+                  value="{{formData.phone}}"
+                  type="number"
+                  bindinput="handleInput"
+                  data-field="phone">
+          </input>
+      </mp-cell>
+   
+        <mp-cell show-error prop="address" title="联系地址：" class="address">
+          <input
+                  value="{{formData.address}}"
+                 
+                  bindinput="handleInput"
+                  data-field="address">
+          </input>
+          <view slot="footer">
+            <i-button size="mini" shape="circle" plain fontColor="#31b977" borderColor="#31b977" greenBorder bind:tap="goGetAddress">获取地址</i-button>
+          </view>
+      </mp-cell>
+      <mp-cell show-error prop="idNumber" title="身份证号：">
+        <input
+                value="{{formData.idNumber}}"
+               
+                bindinput="handleInput"
+                data-field="idNumber">
+        </input>
+    </mp-cell>
+    <mp-cells title="身份证图片(正反面)">
+      <mp-cell show-error prop="illustration">
+          <i-image-uploader maxCount="{{2}}"
+                      bind:uploadsuccess="handleUploadSuccess"
+                      bind:delete="handleUploadDelete"
+                      
+                      >
+          </i-image-uploader>
+      </mp-cell>
+  </mp-cells>
+    </mp-cells>
+    <view class="protocol">
+
+      <van-checkbox value="{{ checked }}" shape="square" bind:change="onChange">
+        同意
+      </van-checkbox>
+      <text class="clause" bindtap="getProtocolAndShow">《用户服务协议》</text>
+      <text>及</text>
+      <text class="clause" bindtap="getPrivacyProtocol">《隐私政策》</text>
+    </view>
+    <view class="form-floor">
+        <i-button size="long" shape="circle" bind:tap="handleRegister">注册</i-button>
+    </view>
+</mp-form>
+<i-modal  show="{{showModal}}" bind:confirm="handleModal" bind:cancel="handleModal" showtitle="{{showModal}}" title="{{protocol.title}}">
+  <mp-html content="{{protocol.content}}" />
+</i-modal>
+<i-modal  show="{{showPrivacyModal}}" bind:confirm="handleModal" bind:cancel="handleModal" showtitle="{{showPrivacyModal}}" title="{{protocol.title}}">
+  <mp-html content="{{protocol.content}}" />
+</i-modal>

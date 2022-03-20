@@ -1,0 +1,123 @@
+{
+  "pages": [
+    "pages/publish-preview/publish-preview",
+    "pages/publish/publish",
+    "pages/home/home",
+    "pages/message/message",
+    "pages/my/my",
+    "pages/my-service/my-service",
+    "pages/service-detail/service-detail",
+    "pages/login/login",
+    "pages/service-edit/service-edit",
+    "pages/conversation/conversation",
+    "pages/order/order",
+    "pages/order-success/order-success",
+    "pages/my-order/my-order",
+    "pages/publish-success/publish-success",
+    "pages/my-wallet/my-wallet",
+    "pages/address/address",
+    "pages/pay-success/pay-success",
+    "pages/register/register",
+    "pages/navigate/navigate",
+    "pages/recycle/recycle",
+    "pages/recycle-edit/recycle-edit",
+    "pages/my-registeprocess/my-registeprocess",
+    "pages/servicer-comment/servicer-comment"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#31b977",
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance": 50,
+    "navigationBarTitleText": "垃圾回收",
+    "backgroundColorBottom": "#efefef"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#C6C6C6",
+    "selectedColor": "#31b977",
+    "list": [
+      {
+        "pagePath": "pages/publish-preview/publish-preview",
+        "text": "首页",
+        "selectedIconPath": "images/tabbar/home-selected.png",
+        "iconPath": "images/tabbar/home.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "广场",
+        "selectedIconPath": "images/tabbar/order-selected.png",
+        "iconPath": "images/tabbar/order.png"
+      },
+      {
+        "pagePath": "pages/recycle/recycle",
+        "text": "一键回收",
+        "selectedIconPath": "images/tabbar/recycle-selected.png",
+        "iconPath": "images/tabbar/recycle.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "selectedIconPath": "images/tabbar/message1-selected.png",
+        "iconPath": "images/tabbar/message.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "selectedIconPath": "images/tabbar/my1-selected.png",
+        "iconPath": "images/tabbar/my1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-icon": "/components/icon/icon",
+    "i-tabs": "/components/tabs/tabs",
+    "i-service-preview": "/components/service-preview/service-preview",
+    "i-show-status": "/components/show-status/show-status",
+    "i-image-category": "/components/category_image/category_image",
+    "i-avatar": "/components/avatar/avatar",
+    "i-service-rating": "/components/service-rating/service-rating",
+    "i-rating": "/components/rating/rating",
+    "i-safe-area": "/components/safe-area/safe-area",
+    "i-button": "/components/button/button",
+    "i-category": "/components/category/category",
+    "i-my-avatar": "/components/my-avatar/my-avatar",
+    "i-location": "/components/location/location",
+    "i-order-location": "/components/order-location/order-location",
+    "i-modal": "/components/modal/modal",
+    "i-chat": "/components/chat/chat",
+    "i-order-info": "/components/order-info/order-info",
+    "i-register-form": "/components/register-form/register-form",
+    "i-image-uploader": "/components/image-uploader/image-uploader",
+    "i-my-horizontal-bar": "/components/my-horizontal-bar/my-horizontal-bar",
+    "i-swiper": "/components/swiper/swiper",
+    "i-ad": "/components/ad/ad",
+    "i-panel": "/components/panel/panel",
+    "i-shop-info": "/components/shop-info/shop-info",
+    "i-category-square": "/components/category_square/category_square",
+    "i-appointment-button": "/components/appointment-button/appointment-button",
+    "i-order-preview": "/components/order-preview/order-preview",
+    "i-registe-preview": "/components/registe-preview/registe-preview",
+    "i-vertical-notice-bar": "/components/vertical-notice-bar/vertical-notice-bar",
+    "i-badge": "/components/badge/badge",
+    "i-grid": "/components/grid/grid",
+    "i-grid-item": "/components/grid-item/grid-item",
+    "i-hot-recycle": "/components/hot-recycle/hot-recycle",
+    "i-notice-bar": "/components/notice-bar/notice-bar",
+    "mp-form": "weui-miniprogram/form/form",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-uploader": "weui-miniprogram/uploader/uploader",
+    "mp-toptips": "weui-miniprogram/toptips/toptips",
+    "mp-msg": "weui-miniprogram/msg/msg"
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序的业务"
+    }
+  }
+}

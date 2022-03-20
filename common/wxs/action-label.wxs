@@ -1,0 +1,30 @@
+var convert = function (status) {
+    var label
+    switch (status) {
+        case 0:
+            label = '去同意'
+            break;
+        case 1:
+            label = '去支付'
+            break;
+        case 2:
+            label = '确认'
+            break;
+        case 3:
+            label = '评价'
+            break;
+        case 4:
+            label = '查看详情'
+            break;
+        case 5:
+            label = '已取消'
+            break;
+        case 6:
+            label = '已拒绝'
+    }
+    return label
+}
+
+module.exports = {
+    convert: convert
+}

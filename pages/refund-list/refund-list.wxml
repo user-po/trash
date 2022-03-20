@@ -1,0 +1,27 @@
+<wxs src="/common/wxs/refund-status.wxs" module="statusConvert"></wxs>
+
+<view class="container">
+    <i-tabs tabs="{{tabs}}" active="{{currentTabIndex}}"
+            bind:change="handleTabChange"
+            bind:doubleclicktab="handleScrollToTop">
+        <view slot="panel">
+            <view class="order-preview" wx:for="{{refundList}}" wx:key="index">
+                <i-order-preview order="{{item.service_order}}"
+                                 role="{{role}}"
+                                 statusLabel="{{statusConvert.convert(item.status)}}">
+                    <view class="action-button-container">
+                        <view class="chat" bind:tap="handleToChat" data-order="{{item}}">
+                            <i-button special="{{true}}" bgColor="#fff" icon="telephone">
+                                联系对方
+                            </i-button>
+                        </view>
+                        <view class="button" bind:tap="handleNavToRefundDetail" data-refund="{{item}}">
+                            <i-button special>查看详情</i-button>
+                        </view>
+                    </view>
+                </i-order-preview>
+            </view>
+            <i-show-status show="{{!refundList.length}}" content="暂时还没有任何退款申请"></i-show-status>
+        </view>
+    </i-tabs>
+</view>

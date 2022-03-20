@@ -1,0 +1,32 @@
+.container {
+    padding: 0rpx 30rpx;
+}
+
+.time {
+    text-align: center;
+    padding-top: 30rpx;
+    color: #888888;
+    font-size: 24rpx;
+}
+
+.message-area {
+    display: flex;
+    margin-top: 30rpx;
+}
+
+.avatar-image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 10rpx;
+}
+
+.content {
+    margin: 0 30rpx;
+    padding: 20rpx 20rpx;
+    width: max-content;
+    max-width: 410rpx;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,133 @@
+<view class="container {{showModal?'hidden':''}}" wx:if="{{showForm}}">
+    <view class="banner">
+        <image mode="aspectFill" src="{{bannerSrc}}" class="img"></image>
+    </view>
+   
+    <i-category categoryList="{{categoryList}}" show_items="{{2}}" bind:switch="handleCategorySwitch" showTitle slot="content"/>
+    <i-panel  class="recycle">
+       <view class="addressList" slot="content">
+            <view class="top">
+                <i-icon name="map"  color="#ee6723"></i-icon>
+                <view class="address" wx:if="{{formData.address}}">{{formData.address}}</view>
+                <view class="address" wx:else>请点击地址簿添加默认地址</view>
+            </view>
+            <view class="bottom">
+                <view class="userInfo"wx:if="{{formData.name&&formData.phone}}">{{formData.name}} {{formData.phone}}</view>
+                <!-- <view class="userInfo" wx:else>请点击地址簿添加默认地址</view> -->
+                <view></view>
+                <view class="addressBtn" bindtap="goGetAddress">
+                    <image src="{{addressImgSrc}}" mode="aspectFill" class="img"></image>
+                    <view class="text" >地址簿</view>
+                </view>
+            </view>                      
+       </view> 
+    </i-panel>
+    <i-panel class="recycle" title="选择预估重量">
+         <view class="weightList" slot="content">
+            <view wx:for="{{tabs}}" wx:key="index" data-index="{{index}}" bindtap="handleTabChange"  class="tabs {{index===currentTabIndex?'tabActive':''}}">
+                <view class="text {{index===currentTabIndex?'textActive':''}}">{{item.text}}</view>
+            </view>
+            <view class="containers">
+                <view class="inner">
+                    <view class="gain">
+                        <view class="text">预计收益</view>
+                        <view class="money">
+                            <image src="{{gainSrc}}" mode="aspectFill" class="img"></image>
+                            <text class="gainText">约￥{{gain[currentTabIndex].money}}</text>
+                        </view>
+                    </view>
+                    <view class="line"></view>
+                    <view class="score">
+                        <view class="text">感谢您为公共事业的付出</view>
+                       <!-- <view class="gainSocre">
+                        <image src="{{scoreSrc}}" mode="aspectFill" class="img"></image> 
+                        <text class="scoreText">约{{score[currentTabIndex].score}}（公益赠送）</text>
+                       </view> -->
+                    </view>
+                </view>
+            </view>
+         </view>
+    </i-panel>
+    <!-- <i-panel  class="recycle">
+        <view class="view-contain-ti" slot="content">
+            <text class="text-ti">任务标题</text>
+            <input
+            class="input1"
+            slot="content"
+            value="{{formData.title}}"
+            placeholder="内容长度不少于 5 个字"
+            bindinput="handleInput"
+            data-field="title">
+        </input>
+        </view>
+        
+    </i-panel> -->
+    <i-panel  class="recycle" title="请上传实物图，若无法拍图可省略">
+        <i-image-uploader slot="content" files="{{files}}" maxCount="{{1}}"
+                              bind:uploadsuccess="handleUploadSuccess"
+                              bind:uploadfail="handleUploadFail"
+                              bind:hidepage="handleHidePage"
+                              bind:validatefail="handleValidatefail"
+                              style="margin: 0 auto;"
+                             
+            ></i-image-uploader>
+    </i-panel>
+    <i-panel  class="recycle">
+        <picker mode="date" value="{{formData.service_date}}" bindchange="handleServiceDateChange" slot="content" class="date">
+            <view wx:if="{{formData.service_date}}">{{ formData.service_date }}</view>
+            <view class="picker-placeholder" wx:else style="font-size: 14px;color: #8F8A71;">请选择上门服务时间</view>
+        </picker>
+    </i-panel>
+    <i-panel title="回收流程" class="recycle">
+         <view class="recycleList" slot="content">
+              <view class="recycle-item" wx:for="{{recycleList}}" wx:key="index">
+                    <view class="img"><image src="{{item.src}}" mode="aspectFill" class="image"></image></view>
+                    <view class="detail">{{item.detail}}</view>
+              </view>
+         </view>
+    </i-panel>
+    <i-panel title="回收要求和注意事项" class="recycle">
+         <view class="recycleList" slot="content">
+             <view class="recycle-item attention-item" wx:for="{{attentionList}}" wx:key="index">
+                <view class="title">{{item.title}}</view>
+                <text class="text">{{item.text}}</text>
+             
+             </view>
+         </view>
+    </i-panel>
+    <i-panel title="常见问题"  class="recycle">
+             <view 
+                class="questionList" 
+                wx:for="{{questionList}}" 
+                wx:key="index" 
+                slot="content"
+             >
+                <view class="info" bind:tap="handleFold" data-index="{{index}}">
+                    {{item.title}}
+                    
+                    <i-icon name="{{item.isShow?'icon_arrow_down':'arrow-right-copy-copy'}}"  color="#b0b0b0" style="text-align:right;"></i-icon>
+                  
+                </view>
+                <view class="content {{item.isShow?'':'hidden'}}">
+                    {{item.content}}
+                </view>
+             </view>
+       
+         <view slot="footer" class="footer">查看更多问题</view>
+         
+    </i-panel>
+  
+    <i-panel  class="recycle" isExtend="true">
+        <view slot="content" class="btnList" style="border-top: 1px solid #eee;">
+            <view class="title" bindtap="getProtocolAndShow">确认发布任务将自动默认<text class="clause" >《上门服务条款》</text></view>
+            <view class="btns">
+                <view class="publishMission" bindtap="submit">立即下单</view>
+                <!-- <view class="donate">公益捐赠</view> -->
+            </view>
+        </view>
+    </i-panel>
+  
+</view>
+<i-modal  show="{{showModal}}" bind:confirm="handleModal" bind:cancel="handleModal" showtitle="{{showModal}}" title="{{protocol.title}}">
+    <mp-html content="{{protocol.content}}" />
+</i-modal>

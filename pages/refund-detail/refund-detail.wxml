@@ -1,0 +1,41 @@
+<view class="container">
+    <view class="address" wx:if="{{refund.service_order.address_snap}}">
+        <i-icon name="map" size="50"/>
+        <view class="address-info">
+            <view class="location-info">
+                {{refund.service_order.address_snap.provinceName}}{{refund.service_order.address_snap.cityName}}{{refund.service_order.address_snap.countyName}}{{refund.service_order.address_snap.detailInfo}}
+            </view>
+            <view class="contact-info">
+                {{refund.service_order.address_snap.userName}} {{refund.service_order.address_snap.telNumber}}
+            </view>
+        </view>
+    </view>
+    <view class="order-preview">
+        <i-order-preview hideTop order="{{refund.service_order}}"/>
+    </view>
+    <view class="chat">
+        <i-chat
+                userInfo="{{refund.service_order[role===RoleType.PUBLISHER?'consumer':'publisher']}}"
+                bind:chat="handleToChat">
+        </i-chat>
+    </view>
+    <view class="order-info">
+        <i-refund-info refund="{{refund}}"/>
+    </view>
+    <view class="refund-detail">
+        <view class="refund-label">申请原因</view>
+        <view class="reason-content">
+            {{refund.reason}}
+        </view>
+        <view wx:if="{{refund.images.length}}" class="reason-images">
+            <block wx:for="{{refund.illustration}}" wx:key="index">
+                <image src="{{item}}"/>
+            </block>
+        </view>
+    </view>
+    <view class="action-button">
+        <i-publisher-action wx:if="{{role=== RoleType.PUBLISHER}}"
+                            status="{{refund.status}}"
+                            bind:action="handleAction"/>
+    </view>
+</view>

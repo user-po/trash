@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="left">
+        <!-- <i-badge show="{{unreadCount}}" count="{{unreadCount}}">
+          
+        </i-badge> -->
+        <image class="avatar" src="{{user.avatar}}"></image>
+    </view>
+    <view class="right">
+        <view class="right-top">
+            <view class="nickname">{{user.nick}}</view>
+            <view class="last-send-time">{{_lastMessage.lastTime}}</view>
+        </view>
+        <view class="right-bottom">
+            {{_lastMessage.messageForShow}}
+        </view>
+    </view>
+</view>

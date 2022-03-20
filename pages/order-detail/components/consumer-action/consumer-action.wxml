@@ -1,0 +1,22 @@
+<view class="paid" wx:if="{{order.status === orderStatus.UNPAID}}">
+  <i-button size="long" shape="circle" bind:tap="handlePay">功能正在开发，请线下支付后点击按钮</i-button>
+</view>
+
+
+<view class="cancel" wx:if="{{ order.status < orderStatus.UNCONFIRMED }}">
+  <i-button
+    size="long"
+    shape="circle"
+    bgColor="#ffffff"
+    data-action="{{ orderAction.CANCEL }}"
+    bind:tap="handleUpdateOrderStatus"
+    >取消订单
+  </i-button>
+</view>
+<!-- <view class="refund" wx:if="{{order.status === orderStatus.UNCONFIRMED}}">
+  <i-button size="long" shape="circle" bgColor="#ffffff"
+            bind:tap="handleRefund">申请退款
+  </i-button>
+</view> -->
+
+

@@ -1,0 +1,40 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+<view class="container">
+    <view class="order-preview">
+        <i-order-preview order="{{order}}" hideTop></i-order-preview>
+    </view>
+
+    <view class="order-info">
+        <i-order-info order="{{order}}"></i-order-info>
+    </view>
+
+    <view class="rating">
+        <mp-form id="form" models="{{formData}}" rules="{{rules}}">
+            <mp-cells title="服务评分">
+                <mp-cell show-error prop="score">
+                    <i-rating count="{{5}}" bind:rating="handleRating"/>
+                </mp-cell>
+            </mp-cells>
+            <mp-cells title="评价内容">
+                <mp-cell show-error prop="content">
+                    <textarea class="rating-textarea"
+                              bindinput="handleInputChange"
+                              placeholder="必填，内容长度不少于 10 个字">
+                    </textarea>
+                </mp-cell>
+            </mp-cells>
+            <mp-cells title="截图(非必填)">
+                <mp-cell>
+                    <i-image-uploader maxCount="{{5}}"
+                                bind:uploadsuccess="handleUploadSuccess"
+                                bind:delete="handleUploadDelete">
+                    </i-image-uploader>
+                </mp-cell>
+            </mp-cells>
+            <view class="form-floor">
+                <i-button bind:tap="handleSubmit" size="long" shape="circle">提交</i-button>
+            </view>
+        </mp-form>
+    </view>
+</view>

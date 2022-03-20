@@ -1,0 +1,11 @@
+<view class="container">
+    <i-conversation-window wx:if="{{sdkReady}}"
+                           targetUserId="{{targetUserId}}"
+                           service="{{service}}"
+                           bind:sendmessage="handleSendMessage"
+    ></i-conversation-window>
+
+    <i-show-status wx:else top="500" show content="会话加载失败~~~">
+        <i-button shape="semicircle" fontColor="#333333" bind:tap="handleLogin">点击刷新</i-button>
+    </i-show-status>
+</view>

@@ -1,0 +1,8 @@
+.address-add{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 36rpx;
+    display: flex;
+    justify-content: center;
+}

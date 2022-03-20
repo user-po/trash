@@ -1,0 +1,16 @@
+<view class="container">
+  <i-tabs tabs="{{tabs}}" active="{{active}}"
+          bind:switch="handleTabChange"
+          >
+      <view slot="panel">
+          <view class="order-preview" wx:for="{{registeList}}" wx:key="index">
+            <i-registe-preview registe="{{item}}">
+
+            </i-registe-preview>
+              <!-- <i-order-preview registe="{{item}}">
+              </i-order-preview> -->
+          </view>
+          <i-show-status show="{{!registeList.length}}" top="220" content="暂时没有注册请求"></i-show-status>
+      </view>
+  </i-tabs>
+</view>

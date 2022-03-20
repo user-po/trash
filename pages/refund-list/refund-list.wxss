@@ -1,0 +1,15 @@
+.container {
+    height: 100%;
+}
+
+.action-button-container {
+    margin-top: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.order-preview {
+    margin-bottom: 30rpx;
+}

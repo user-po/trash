@@ -1,0 +1,17 @@
+<view class="container">
+    <i-tabs tabs="{{tabs}}" active="{{active}}"
+            bind:switch="handleTabChange"
+            bind:doubleclicktab="handleScrollToTop">
+        <view slot="panel">
+            <view class="service-preview" wx:for="{{serviceList}}" wx:key="index">
+                <i-service-preview service="{{item}}"
+                                   data-service="{{item}}"
+                                   bind:tap="handleSelect"></i-service-preview>
+            </view>
+            <i-show-status show="{{!serviceList.length}}"
+                           top="220"
+                           content="暂时还没有任何服务">
+            </i-show-status>
+        </view>
+    </i-tabs>
+</view>

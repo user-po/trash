@@ -1,0 +1,11 @@
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" style="height: 100%;"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular easing-function="easeOutCubic">
+  <block wx:for="{{imageList}}" wx:key="*this">
+    <swiper-item style="border-radius: 10px;">
+      <image mode="aspectFill" src="{{item.src}}" class="img"></image>
+    </swiper-item>
+  </block>
+</swiper>
+ 
+</view>

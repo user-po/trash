@@ -1,0 +1,14 @@
+.container {
+    background-color: #ffffff;
+    padding: 30rpx 30rpx;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15rpx 0rpx;
+}
+
+.order-status {
+    color: red;
+}

@@ -1,0 +1,17 @@
+.container {
+    background: #ffffff;
+    border-radius: 20rpx;
+    padding: 30rpx 30rpx;
+}
+.address{
+    font-size: 25rpx;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15rpx;
+}
+
+.order-status {
+    color: red;
+}

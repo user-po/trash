@@ -1,0 +1,30 @@
+.container {
+    font-size: 28rpx;
+}
+
+.action-bar {
+    background-color: #efefef;
+    box-sizing: border-box;
+    border-top: 1px solid #dedede;
+    padding: 30rpx 30rpx;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+.customMsg{
+    margin-right: 10rpx;
+}
+.inner-container {
+    display: flex;
+    align-items: center;
+}
+
+.conversation-textarea {
+    width: 100%;
+    background-color: #fff;
+    padding: 20rpx 20rpx;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+    border-radius: 10rpx;
+}

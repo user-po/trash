@@ -1,0 +1,5 @@
+<view class="container {{isExtend?'extend':''}}">
+    <view class="title">{{title}}</view>
+    <slot name="content"></slot>
+    <slot name="footer"></slot>
+</view>

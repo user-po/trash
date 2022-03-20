@@ -1,0 +1,109 @@
+@import "../../iconfont/index.wxss";
+.container {
+    background-color: #ffffff;
+    border-radius: 10rpx;
+    padding: 30rpx 30rpx;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 22rpx;
+}
+
+.left {
+    position: relative;
+}
+
+.type-tag {
+    padding: 10rpx;
+    width: max-content;
+    background-color: #333333;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 14rpx;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+}
+
+.cover-image {
+    width: 180rpx;
+    height: 190rpx;
+    border-radius: 10rpx;
+}
+
+
+.right {
+    width: 100%;
+    margin-left: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.service-title {
+    min-width: 100rpx;
+    max-width: 340rpx;
+    font-size: 32rpx;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    margin-left: 20rpx;
+}
+
+.category-text{
+    margin-left: 10rpx;
+}
+
+.publisher {
+    display: flex;
+    align-items: center;
+}
+
+.publisher-avatar-image {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+}
+
+.publisher-nickname {
+    margin-left: 10rpx;
+}
+
+.score {
+    color: #f27013;
+    margin-left: 30rpx;
+}
+
+.create-time {
+    color: #888888;
+}
+
+.price {
+    font-size: 32rpx;
+    color: red;
+}
+
+.label{
+    color: red;
+    font-size: 22rpx;
+}
+
+.sales{
+    color: #888888;
+}
+
+.row-last{
+    justify-content: space-between;
+}

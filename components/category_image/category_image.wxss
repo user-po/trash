@@ -1,0 +1,39 @@
+/* components/category_image/category_image.wxss */
+.category{
+    background-color: #ffffff;
+    color: #666666;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.ca-item{
+    height:140rpx;
+    line-height:40rpx;
+    width:180rpx;
+    display: inline-block;
+    margin: 0 9rpx;
+    padding: 0 20rpx;
+    text-align: center;
+    box-sizing: border-box;
+    
+    
+}
+.img{
+    width: 44px;
+    height: 44px;
+    margin-top: 10rpx;
+    justify-content: center;
+    max-width: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    box-sizing: border-box;
+}
+.text{
+    font-size: 24rpx;
+    margin-top: -10rpx;
+   
+}
+.active{
+    border-bottom: 4rpx solid;
+    color: #31b977;
+}

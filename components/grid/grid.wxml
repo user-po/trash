@@ -1,0 +1,20 @@
+<view class="container" style="{{!title && !extend ? 'padding-top:30rpx':''}}">
+    <view class="header" wx:if="{{title || extend}}">
+        <view class="title" wx:if="{{title}}">
+            {{title}}
+        </view>
+        <view class="extend" wx:if="{{extend}}" bind:tap="handleExtend">
+            {{extend}}
+        </view>
+    </view>
+    <!--suppress CssUnitlessNumber -->
+    <view wx:for="{{gridItems}}" wx:key="index"
+          style="width: {{100 / rowNum}}%"
+          bind:select="handleSelect"
+    >
+        
+        <slot name="{{index}}">
+            
+        </slot>
+    </view>
+</view>

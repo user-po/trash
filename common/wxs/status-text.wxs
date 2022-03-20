@@ -1,0 +1,31 @@
+var convert = function (status) {
+    var statusText
+
+    switch (status) {
+        case 0:
+            statusText = '待审核'
+            break;
+        case 1:
+            statusText = '待发布'
+            break;
+        case 2:
+            statusText = '已发布'
+            break;
+        case 3:
+            statusText = '已下架'
+            break;
+        case 4:
+            statusText = '已取消'
+            break;
+        case 5:
+            statusText = '审核不通过'
+            break;
+        default:
+            statusText = '未知状态'
+    }
+    return statusText
+}
+
+module.exports = {
+    convert: convert
+}

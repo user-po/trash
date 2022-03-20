@@ -1,0 +1,23 @@
+<view class="container">
+    <mp-msg type="success" title="发布成功">
+        <!-- <view slot="desc">请耐心等待后台审核
+        </view>
+        <view slot="extend">
+            <view>1. 防止上当受骗提示内容</view>
+            <view>2. 防止上当受骗提示内容</view>
+        </view> -->
+        <view slot="handle">
+            <i-button size="long" bind:tap="handleCheckService">查看服务状态</i-button>
+
+            <view style="margin-top: 30rpx" bind:tap="handleNavToHome">
+                <i-button size="long" bgColor="#F2F2F2"
+                          fontColor="#333333">返回首页
+                </i-button>
+            </view>
+
+        </view>
+        <view slot="footer">
+            <view class="weui-footer__text">回收驿站，放心到家</view>
+        </view>
+    </mp-msg>
+</view>

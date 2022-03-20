@@ -1,0 +1,43 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/3/12 上午9:34:08
+使用方法：
+在 D:\homemaking\pages\publish-preview\publish-preview.wxml 引入模板
+
+```
+<import src="publish-preview.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\homemaking\pages\publish-preview\publish-preview.wxss 中引入样式
+```
+@import "./publish-preview.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view is="components/swiper/swiper">
+      <view class="swiper--container sk-image">
+        <view class="swiper--yunl">
+          <image class="swiper--yunl-img sk-image" mode="aspectFit"></image>
+        </view>
+        <view class="swiper--yunr">
+          <image class="swiper--yunr-img sk-image" mode="aspectFit"></image>
+        </view>
+        <view class="swiper--car">
+          <image class="swiper--car-img sk-image" mode="aspectFill"></image>
+          <view class="swiper--carl">
+            <image class="swiper--carl-img sk-image" mode="aspectFit"></image>
+          </view>
+          <view class="swiper--carr">
+            <image class="swiper--carr-img sk-image" mode="aspectFit"></image>
+          </view>
+        </view>
+        <view class="swiper--earth">
+          <image class="swiper--earth-img sk-image" mode="aspectFit"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

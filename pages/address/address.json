@@ -1,0 +1,8 @@
+{
+    "navigationBarBackgroundColor": "#31b977",
+    "navigationBarTitleText": "地址管理",
+    "backgroundColorTop": "#31b977",
+    "usingComponents": {
+        "i-address-list":"components/address-list/address-list"
+      }
+  }

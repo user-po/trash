@@ -1,0 +1,12 @@
+<view class="container" style="margin-top: {{top}}rpx;" wx:if="{{show}}">
+  <view >
+    <image mode="widthFix" src="/images/nodata.png" class="image"> </image>
+ </view>
+  <view    class="text">
+    {{content}}
+  </view>
+  <view class="extend">
+     <slot></slot>
+  </view>
+ 
+</view>

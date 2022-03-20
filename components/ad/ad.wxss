@@ -1,0 +1,9 @@
+.img{
+    width: 670rpx;
+    height: 240rpx;
+    border-radius: 10px;
+}
+.container{
+    width: 670rpx;
+    height: 240rpx;
+}

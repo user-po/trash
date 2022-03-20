@@ -1,0 +1,107 @@
+.container{
+    width: 100%;
+    height: 600rpx;
+    background: url('http://112.74.54.65:3000/storage/20220303/0-17f4ffce6c2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 48rpx;
+    border-bottom-right-radius: 48rpx;
+    position: relative;
+    overflow: hidden;
+
+}
+.car{
+    position: absolute;
+    width: 214rpx;
+    height: 92rpx;
+    top: 53%;
+    left: 36%;
+    z-index: 2;
+}
+.car .car-img{
+    width: 214rpx;
+    height: 99rpx;
+   
+}
+.earth{
+    position: absolute;
+    width: 438rpx;
+    height: 100rpx;
+    top: 59%;
+    left: 7%;
+   
+
+ 
+}
+.earth .earth-img{   
+    animation: rotate 15s linear  infinite ;
+    
+}
+.carl{
+    position: absolute;
+    width: 34rpx;
+    height: 34rpx;
+    top: 63rpx;
+    left: 10rpx;
+}
+.carl .carl-img{
+    width: 34rpx;
+    height: 34rpx;
+    animation: rotate 1.5s linear  infinite ;
+}
+.carr{
+    position: absolute;
+    width: 34rpx;
+    height: 34rpx;
+    top: 63rpx;
+    left: 157rpx;
+
+}
+.carm{
+    position: absolute;
+    width: 34rpx;
+    height: 34rpx;
+    top: 63rpx;
+    left: 118rpx;
+}
+.carr .carr-img{
+    width: 34rpx;
+    height: 34rpx;
+    animation: rotate 1.5s linear  infinite ;
+}
+.yunr{
+    width: 136rpx;
+    height: 62rpx;
+    position: absolute;
+    left: 187rpx;
+    top: 100rpx;
+}
+.yunr .yunr-img{
+    width: 136rpx;
+    height: 62rpx;
+    animation: moveRight 12s infinite linear;
+}
+.yunl{
+    width: 180rpx;
+    height: 100rpx;
+    position: absolute;
+    left: 15rpx;
+    top: 200rpx;
+}
+.yunl .yunl-img{
+    width: 180rpx;
+    height: 100rpx;
+    animation: moveLeft 12s infinite linear;
+}
+@keyframes rotate{
+    from{transform: rotate(0deg) infinite;}
+    to{transform: rotate(360deg);}
+}
+@keyframes moveLeft{
+    from{transform: translateX(0rpx) infinite;}
+    to{transform: translateX(750rpx);}
+}
+@keyframes moveRight{
+    from{transform: translateX(0rpx) infinite;}
+    to{transform: translateX(600rpx);}
+}

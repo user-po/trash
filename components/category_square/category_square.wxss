@@ -1,0 +1,29 @@
+
+.container{  
+    display: flex;
+    flex-wrap: wrap;
+    width: 670rpx;
+    height: 204rpx;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 12px;
+    justify-content: space-around;
+    align-items: center;
+}
+.border{
+    border: 1px solid;
+   
+    color: #DA674D;
+}
+.list-item{
+    padding: 18rpx 22rpx;
+}
+.image{
+    width: 84rpx;
+    height: 84rpx;
+}
+.desc{
+    font-size: 12px;
+    color: #666666;
+    font-weight: 500;
+}

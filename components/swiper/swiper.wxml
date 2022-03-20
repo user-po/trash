@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="yunl"> 
+     <image class="yunl-img" src="http://112.74.54.65:3000/storage/20220303/0-17f5045b4f5.png" mode="aspectFit"></image>
+  </view>
+  <view class="yunr">
+    <image class="yunr-img" src="http://112.74.54.65:3000/storage/20220303/1-17f5045c14e.png" mode="aspectFit"></image>
+  </view>
+  <!-- https://www.gxfjyz.com/storage/20220312/0-17f7e17950c.png -->
+  <view class="car">
+      <image src="../../images/car.png" mode="aspectFit" class="car-img"></image>
+      <view class="carl">
+         <image src="http://112.74.54.65:3000/storage/20220303/0-17f502c475a.png" mode="aspectFit" class="carl-img"></image>
+      </view>
+      <view class="carl carm">
+        <image src="http://112.74.54.65:3000/storage/20220303/0-17f502c475a.png" mode="aspectFit" class="carl-img"></image>
+     </view>
+      <view class="carr">
+        <image src="http://112.74.54.65:3000/storage/20220303/0-17f50417aad.png" mode="aspectFit" class="carr-img"></image>
+      </view>
+  </view>
+  <view class="earth">
+     <image src="http://112.74.54.65:3000/storage/20220303/0-17f5005e383.png"  mode="aspectFit" class="earth-img"></image>
+  </view>
+</view>

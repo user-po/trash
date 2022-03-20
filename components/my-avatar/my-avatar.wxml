@@ -1,0 +1,9 @@
+<view class="userinfo">
+    <i-icon name="gongyong_xiazaihuiyuantouxiangguajian_" class="icon" size="25" wx:if="{{isServicer}}"></i-icon>
+    <view class="userinfo-avatar {{isServicer?'servicer':''}}">
+       
+        <image src="{{src}}" class="image "></image>
+    </view> 
+    <van-tag color="#83d69e" text-color="#83d69e" size="medium" plain  wx:if="{{isServicer}}">回收员</van-tag>
+    <button class="btn">{{text}}</button>
+</view>

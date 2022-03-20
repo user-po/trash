@@ -1,0 +1,19 @@
+<scroll-view scroll-x class="category" scroll-with-animation scroll-left="{{scrollLeft}}">
+    <view 
+      
+        wx:for="{{categoryList}}"
+        class="ca-item {{currentTabIndex===index?'active':''}}" 
+        wx:key="index"
+        bindtap="handleCategorySwitch"
+        data-id="{{item._id}}"
+        data-index="{{index}}"
+       >
+      <image 
+        class='img' 
+        src="{{item.path}}" 
+        mode="widthFix" 
+       >
+    </image>
+      <view class="text">{{item.name}}</view>
+    </view>
+ </scroll-view>

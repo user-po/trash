@@ -1,0 +1,46 @@
+.container {
+    font-size: 28rpx;
+    padding-bottom: 200rpx;
+}
+
+.address, .chat, .rating-detail {
+    margin-top: 30rpx;
+    background: #ffffff;
+    border-radius: 20rpx;
+    padding: 30rpx 30rpx;
+}
+.map{
+    width: 100vw;
+    height:30vh;
+}
+.address {
+    display: flex;
+    align-items: center;
+}
+
+.address-info {
+    margin-top: 10rpx;
+    margin-left: 28rpx;
+
+}
+
+.contact-info {
+    margin-top: 10rpx;
+    color: #888888;
+}
+
+.order-preview, .order-info {
+    margin-top: 30rpx;
+}
+
+.rating-label {
+    padding-bottom: 20rpx;
+    margin-bottom: 30rpx;
+    border-bottom: 1px solid #efefef;
+    font-weight: bold;
+}
+
+.action-bar {
+    margin-top: 80rpx;
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="chat" bind:tap="handleToChat">
+      <i-button special icon="telephone">联系对方</i-button>
+  </view>
+
+  <view bind:tap="handleNavToOrderDetail">
+      <i-button wx:if="{{order.status === orderStatus.UNAPPROVED}}"
+                shape="semicircle"
+                size="mini">
+          去同意
+      </i-button>
+      <i-button wx:else special>
+          查看详情
+      </i-button>
+  </view>
+</view>

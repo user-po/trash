@@ -1,0 +1,20 @@
+<view class="title" wx:if="{{showTitle}}">{{title}}</view>
+<view class="category">
+  
+    <swiper display-multiple-items="5" next-margin="60rpx" >
+      <swiper-item
+        wx:for="{{categoryList}}"
+        wx:key="index"
+        bindtap="handleCategorySwitch"
+        data-id="{{item._id}}"
+        data-index="{{index}}"
+        class="swiper-item"
+      >
+        <view class="category-swiper-item">
+          <view class="triangle {{categoryPickerIndex===index?'active':''}}"></view>
+          <view class="img"><image model="aspectFill" src="{{item.path}}" class="image"></image></view>
+          <text class="category-name">{{item.name}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>

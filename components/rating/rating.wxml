@@ -1,0 +1,8 @@
+<view class="container">
+    <view class="item" bind:tap="handleSelect" data-index="{{index}}"
+          wx:for="{{count}}" wx:key="index">
+        <i-icon name="{{icon}}" size="{{size}}"
+                color="{{index <= currentIndex || index < selected ? selectedColor: defaultColor}}"
+        ></i-icon>
+    </view>
+</view>

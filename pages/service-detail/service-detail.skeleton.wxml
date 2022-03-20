@@ -1,0 +1,100 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/2/1 下午11:32:41
+使用方法：
+在 D:\homemaking\pages\service-detail\service-detail.wxml 引入模板
+
+```
+<import src="service-detail.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\homemaking\pages\service-detail\service-detail.wxss 中引入样式
+```
+@import "./service-detail.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container">
+      <view class="inner-container">
+        <view class="service-info">
+          <image class="cover-image sk-image" mode="widthFix" style="height: 375px;"></image>
+          <view class="row">
+            <view class="title sk-transparent sk-text-18-7500-336 sk-text">装修设计服务</view>
+            <view class="category">
+              <view is="components/icon/icon">
+                <view class="icon--iconfont icon--icon-biaoqian sk-pseudo sk-pseudo-circle" style="font-size: 17px;color:#f27013;"></view>
+              </view>
+              <view class="tag-text sk-transparent sk-text-18-7500-979 sk-text">装修</view>
+            </view>
+          </view>
+          <view class="row">
+            <view class="publisher">
+              <view is="components/avatar/avatar">
+                <view class="avatar--container">
+                  <view class="avatar--avatar">
+                    <image class="avatar--avatar-image sk-image" style="width: 30px;height: 30px;border-radius: 50%"></image>
+                  </view>
+                  <view class="avatar--nickname sk-transparent sk-opacity" style="font-size: 14px">朕</view>
+                </view>
+              </view>
+            </view>
+            <view class="weight sk-transparent sk-text-18-7500-148 sk-text">
+              ★ 0
+            </view>
+          </view>
+          <view class="row">
+            <view class="create-time sk-transparent sk-text-18-7500-864 sk-text">2021-12-26 23:28:32</view>
+          </view>
+          <view class="row row-space-between">
+            <view class="price">
+              <view class="price sk-transparent">
+                <text class="label sk-transparent sk-opacity">￥</text>2222.00
+              </view>
+            </view>
+            <view class="address sk-transparent sk-text-18-7500-503 sk-text">
+              已售 0
+            </view>
+          </view>
+          <view class="row">
+            <view class="description sk-transparent sk-text-18-7500-71 sk-text">集室内设计、预算、施工、材料于一体的专业化设计公司。装修公司是为相关业主提供装修装饰方面的技术支持, 包括提供设计师和装修工人,</view>
+          </view>
+        </view>
+        <view class="service-rating">
+          <view class="sevice-rating-title sk-transparent sk-text-18-7500-814 sk-text">历史评价</view>
+          <view>
+            <view is="components/show-status/show-status">
+              <view class="status--container sk-transparent sk-text-18-7500-936 sk-text" style="margin-top: 75px;">
+                暂时还没有任何评价
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="action-bar" style="border: none;">
+          <view is="pages/service-detail/components/consumer-action/consumer-action">
+            <view class="action--action-bar-item">
+              <view is="components/button/button">
+                <label for="btn" class="sk-button">
+                  <view class="button--i-button-special sk-transparent" style="true">
+                    <view is="components/icon/icon" style="margin-right:5px">
+                      <view class="icon--iconfont icon--icon-telephone sk-pseudo sk-pseudo-circle" style="font-size: 17px;color:;"></view>
+                    </view>联系对方</view>
+                </label>
+              </view>
+              <view is="components/button/button">
+                <label for="btn" class="sk-button">
+                  <view class="button--i-button button--shape-semicircle button--medium button--i-class sk-transparent sk-text-18-7500-611 sk-text" style="background-color:#f3d066;">立即预约</view>
+                </label>
+              </view>
+            </view>
+          </view>
+          <view is="components/safe-area/safe-area">
+            <view class="area--safe-area-bottom"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

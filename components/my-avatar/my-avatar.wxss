@@ -1,0 +1,46 @@
+.userinfo {
+    position: relative;
+    height: 320rpx;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+    box-sizing: border-box;
+}
+.userinfo-avatar {
+    overflow: hidden;
+    display: block;
+    width: 160rpx;
+    height: 160rpx;
+    margin: 5rpx;
+    margin-top: 0rpx;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+}
+.icon{
+    position: absolute;
+    top: -33rpx;
+}
+.servicer{
+    border: 3px solid #fbc02d !important;
+}
+.image{
+    max-width: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+.btn{
+    background: none;
+    color: #fff;
+}
+button::after {
+    border: none;
+ }

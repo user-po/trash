@@ -1,0 +1,54 @@
+<view class="container">
+  <scroll-view
+    class="message-list"
+    scroll-y
+    show-scrollbar="{{ false }}"
+    style="height: {{ scrollHeight }}px"
+    enhanced
+    bind:scrolltoupper="handleScrolltoupper"
+    scroll-into-view="message-{{ intoView }}"
+  >
+    <view wx:for="{{ messageList }}" wx:key="index" id="message-{{ index }}">
+      <i-message
+        message="{{ item }}"
+        bind:send="handleSendLink"
+        bind:select="handleSelect"
+      >
+      </i-message>
+    </view>
+  </scroll-view>
+
+  <view class="action-bar">
+    <view class="inner-container">
+      <i-icon
+        name="picture"
+        size="60"
+        color="#333333"
+        bind:tap="handleSendImage"
+      ></i-icon>
+      <textarea
+        value="{{ text }}"
+        class="conversation-textarea"
+        auto-height
+        cursor-spacing="{{ 30 }}"
+        disable-default-padding
+        fixed
+        hold-keyboard
+        placeholder="不要乱说话哦"
+        bind:input="handleInput"
+      ></textarea>
+      <picker
+      mode="selector"
+      value="{{pickerIndex}}"     
+      range="{{ customMessageList }}"
+      bindchange="handleMessageChange"
+    >
+    <i-button shape="circle" size="mini" wx:if="{{showPicker}}" class="customMsg">常用语</i-button>
+    </picker>
+
+      <i-button shape="circle" size="mini" bind:tap="handleSend">发送</i-button>
+    </view>
+    <i-safe-area area="bottom"></i-safe-area>
+  </view>
+  
+</view>

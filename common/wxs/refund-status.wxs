@@ -1,0 +1,30 @@
+var convert = function (status) {
+    var statusText
+    switch (status) {
+        case 0:
+            statusText = '待同意'
+            break;
+        case 1:
+            statusText = '已同意'
+            break;
+        case 2:
+            statusText = '已退款'
+            break;
+        case 3:
+            statusText = '已完成'
+            break;
+        case 4:
+            statusText = '已拒绝'
+            break;
+        case 5:
+            statusText = '已取消'
+            break;
+        default:
+            statusText = '未知状态'
+    }
+    return statusText
+}
+
+module.exports = {
+    convert: convert
+}

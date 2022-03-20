@@ -1,0 +1,25 @@
+<import src="publish-preview.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<i-swiper
+    swiperList="{{swiperList}}" 
+>
+
+</i-swiper>
+
+<view class="container {{playSlide?'slide':''}}">
+    <i-hot-recycle class="hot-recycle " list="{{hotList}}">
+ 
+    </i-hot-recycle>
+    <i-category-square
+    class="category "
+    categorySquareList="{{categorySquareList}}"
+    >
+    
+    </i-category-square>
+    <i-notice-bar class="notice">
+        
+    </i-notice-bar>
+    <i-ad imageList="{{imageList}}" class="ad"></i-ad>
+    
+    <!-- <i-shop-info shopImageList="{{shopImageList}}"></i-shop-info> -->
+</view>

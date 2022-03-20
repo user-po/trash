@@ -1,0 +1,7 @@
+<wxs src="count.wxs" module="countFormat"></wxs>
+<view class="container">
+    <view class="dot {{type}}" wx:if="{{show}}">
+        {{countFormat.countFormat(count)}}
+    </view>
+    <slot></slot>
+</view>

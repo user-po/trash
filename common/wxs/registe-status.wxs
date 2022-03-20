@@ -1,0 +1,21 @@
+var convert = function (status) {
+  var statusText
+  switch (status) {
+      case 1:
+          statusText = '待审核'
+          break;
+      case 2:
+          statusText = '已同意'
+          break;
+      case 3:
+            statusText = '已拒绝'
+            break;
+      default:
+          statusText = '未知状态'
+  }
+  return statusText
+}
+
+module.exports = {
+  convert: convert
+}

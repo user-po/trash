@@ -1,0 +1,48 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+<view class="container">
+    <view class="address" wx:if="{{order.address_snap}}">
+        <i-icon name="map" size="50"/>
+        <view class="address-info">
+            <view class="location-info">
+                {{order.address_snap.provinceName}}{{order.address_snap.cityName}}{{order.address_snap.countyName}}{{address.detailInfo}}
+            </view>
+            <view class="contact-info">{{order.address_snap.userName}} {{order.address_snap.telNumber}}</view>
+        </view>
+    </view>
+    <view class="service">
+        <i-order-preview hideTop order="{{order}}"/>
+    </view>
+    <view class="order-info">
+        <i-order-info order="{{order}}"></i-order-info>
+    </view>
+    <view class="reason">
+        <mp-form id="form" models="{{formData}}" rules="{{rules}}">
+            <mp-cells title="申请原因">
+                <mp-cell show-error prop="reason">
+                    <textarea class="reason-textarea"
+                              bindinput="bindInputChange"
+                              data-field="reason"
+                              value="{{formData.reason}}"
+                              placeholder="必填，内容长度不少于 20 个字">
+                    </textarea>
+                </mp-cell>
+            </mp-cells>
+            <mp-cells title="截图(非必填)">
+                <mp-cell>
+                    <mp-uploader
+                            select="{{selectFile}}"
+                            upload="{{uploadFile}}"
+                            bindfail="handleUploadError"
+                            bindsuccess="handleUploadSuccess"
+                            binddelete="handleDelete"
+                            files="{{files}}"
+                            max-count="5"></mp-uploader>
+                </mp-cell>
+            </mp-cells>
+        </mp-form>
+    </view>
+    <view class="form-floor">
+        <i-button bind:tap="handleSubmit" size="long" shape="circle">提交</i-button>
+    </view>
+</view>

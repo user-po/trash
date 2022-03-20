@@ -1,0 +1,106 @@
+<wxs src="/common/wxs/status-text.wxs" module="statusText"></wxs>
+<import src="service-detail.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<view class="container">
+  <view class="inner-container">
+    <view class="service-info">
+      <image
+        class="cover-image"
+        mode="aspectFill"
+        src="{{ service.cover_image.path }}"
+      ></image>
+      <view class="row">
+        <view class="title">{{ service.title }}</view>
+        <view class="category">
+          <i-icon name="biaoqian" color="#f27013"></i-icon>
+          <view class="tag-text">{{ service.category.name }}</view>
+        </view>
+      </view>
+      <view class="row">
+        <view class="publisher">
+          <i-avatar
+            shape="circle"
+            src="{{ service.publisher.avatar }}"
+            text="{{ service.publisher.nickname }}"
+            size="60"
+            fontSize="28"
+          ></i-avatar>
+        </view>
+        <view
+          class="weight"
+          wx:if="{{ service.type === serviceTypeEnum.SEEK }}"
+        >
+          ★ {{ service.score || 0 }}
+        </view>
+      </view>
+      <view class="row">
+        <view class="create-time">{{ service.create_time }}</view>
+      </view>
+      <view class="row row-space-between" wx:if="{{ service.type === serviceTypeEnum.SEEK }}">
+        <view class="price">
+          <view class="price">
+            <text class="label">￥</text>{{ service.price }}
+          </view>
+        </view>
+      </view>
+      <view class="row">
+        <view class="description">{{ service.description }}</view>
+      </view>
+
+    </view>
+    <view wx:if="{{ isPublisher }}" class="service-status">
+      <view class="label">任务状态</view>
+      <view class="status">{{ statusText.convert(service.status) }}</view>
+    </view>
+    <view class="service-status"  wx:if="{{ service.type === serviceTypeEnum.PROVIDE }}">
+
+    <view class="label">回收地址</view>
+    <view class="status"> {{ service.address }}</view>
+
+    </view>
+    <view class="service-status"  wx:if="{{hasOrder}}">
+
+      <view class="label">联系电话</view>
+      <view class="status"> {{ service.phone }}</view>
+  
+      </view>
+    <view
+      class="service-rating"
+      wx:if="{{ service.type === serviceTypeEnum.SEEK }}"
+    >
+      <view class="sevice-rating-title">历史评价</view>
+      <view wx:if="{{ ratingList.length }}" class="service-rating-list">
+        <view
+          class="service-rating-item"
+          wx:for="{{ ratingList }}"
+          wx:key="index"
+        >
+          <i-service-rating rating="{{ item }}"></i-service-rating>
+        </view>
+      </view>
+      <view wx:else>
+        <i-show-status
+          show
+          content="暂时还没有任何评价"
+          
+        ></i-show-status>
+      </view>
+    </view>
+    <view class="action-bar">
+      <i-publisher-action
+        wx:if="{{ isPublisher }}"
+        service="{{ service }}"
+        bind:update="handleUpdateStatus"
+        bind:edit="handleEditService"
+      ></i-publisher-action>
+      <i-consumer-action
+        wx:if="{{isServicer&&!isPublisher}}"
+        service="{{ service }}"
+        bind:chat="handleChat"
+        bind:order="handleOrder"
+      ></i-consumer-action>
+      <i-safe-area area="bottom"></i-safe-area>
+    </view>
+  </view>
+
+</view>

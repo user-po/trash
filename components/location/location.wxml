@@ -1,0 +1,22 @@
+<view class="address" bind:tap="handleSelectAddress">
+    
+    <view wx:if="{{address}}" class="address-info">
+        <view class="location-info">
+            {{address.provinceName}}
+            {{address.cityName}}
+            {{address.countyName}}
+            {{address.detailInfo}}
+        </view>
+        <view class="contact-info">
+            {{address.userName}} {{address.telNumber}}
+        </view>
+    </view>
+    <view wx:else class="notice-text">
+        
+        +添加回收地址
+      
+    </view>
+   <view class="to_address">
+      <i-icon name="jiantou" color="#333333" size="20"></i-icon>
+   </view>
+</view>

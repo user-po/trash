@@ -1,0 +1,10 @@
+<view class="container_ani"></view>
+<view class="container">
+    <button class="btn" aria-disabled="false" bind:tap="goPublish">
+        <image class="image" src="{{imageSrc}}" mode="widthFix">
+            
+        </image>
+        <view class="appointment">{{text}}</view>
+    </button>
+
+</view>

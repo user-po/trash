@@ -1,0 +1,54 @@
+<view class="container">
+    <view class="map" wx:if="{{order.status<orderStatus.COMPLETED}}">
+        <i-order-location from="{{from}}" to="{{to}}"></i-order-location>
+      </view>
+    <view class="address" wx:if="{{order.address_snap}}" >
+        <i-icon name="map" size="50"></i-icon>
+        <view class="address-info" >
+            <view class="location-info">
+                {{order.address_snap.provinceName}}
+                {{order.address_snap.cityName}}
+                {{order.address_snap.countyName}}
+            </view>
+            <view class="contact-info">
+                {{order.address_snap.userName}} {{order.address_snap.telNumber}} 
+            </view>
+        </view>
+    </view>
+  
+      
+    
+    <view class="order-preview">
+        <i-order-preview hideTop order="{{order}}"></i-order-preview>
+    </view>
+    <view class="chat">
+        <i-chat
+                userInfo="{{order[role=== roleType.PUBLISHER ? 'consumer':'publisher']}}"
+                role="{{role}}"
+                bind:chat="handleToChat">
+        </i-chat>
+    </view>
+    <view class="order-info">
+        <i-order-info order="{{order}}"></i-order-info>
+    </view>
+    <view class="rating-detail" wx:if="{{rating}}">
+        <view class="rating-label">服务评价</view>
+        <i-service-rating rating="{{rating}}"></i-service-rating>
+    </view>
+
+    <view class="action-bar">
+        <i-publisher-action wx:if="{{role === roleType.PUBLISHER}}"
+                            order="{{order}}"
+                            bind:update-status="handleUpdateOrderStatus"
+                            bind:rating="handleRating"
+                            >
+        </i-publisher-action>
+        <i-consumer-action wx:if="{{role === roleType.CONSUMER}}"
+                           order="{{order}}"
+                           bind:update-status="handleUpdateOrderStatus"
+                           bind:refund="handleRefund"
+                          
+                           bind:pay="handlePay">
+        </i-consumer-action>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+<import src="home.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+<i-vertical-notice-bar
+msgList="{{texts}}" 
+>
+
+</i-vertical-notice-bar>
+<view class="container">
+ 
+  <i-tabs tabs="[]" bind:switch="handleTabSwitch" hide="true">
+    <!-- <view slot="extend">
+      <i-category categoryList="{{categoryList}}" show_items="{{2}}" bind:switch="handleCategorySwitch"/>
+    
+    </view> -->
+    <view slot="panel" >
+      <view class="service-preview" wx:for="{{serviceList}}" wx:key="index">
+        <i-service-preview service="{{item}}" bind:tap="handleSelectService" data-service="{{item}}"></i-service-preview>
+      </view>
+        <i-show-status show="{{serviceList.length<1}}" content="暂时还没有任何服务" top="220"></i-show-status>
+    </view>
+  </i-tabs>
+</view>

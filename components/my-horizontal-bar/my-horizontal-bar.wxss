@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    position: relative;
+    box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+    color: #8799a3;
+    text-align: center;
+    background-color: #fff;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+.container:before, .container:after {
+    position: absolute;
+    content: "";
+    top: 20rpx;
+    bottom: 30rpx;
+    left: 20rpx;
+    width: 50%;
+    box-shadow: 0 30rpx 20rpx rgba(0, 0, 0, 0.2);
+    transform: rotate(-3deg);
+    z-index: -1;
+}
+
+.container:after {
+	right: 20rpx;
+	left: auto;
+	transform: rotate(3deg);
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.detail{
+    display: flex;
+    justify-content: center;
+    margin-top: 20rpx;
+}

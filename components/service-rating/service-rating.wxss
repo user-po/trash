@@ -1,0 +1,30 @@
+.score,.content{
+    margin-top: 20rpx;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score, .create-time {
+    color: #888888;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+}
+
+.illustration{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.illustration-image{
+    width: 200rpx;
+    height: 200rpx;
+    margin-right: 30rpx;
+    margin-top: 30rpx;
+}

@@ -1,0 +1,5 @@
+<view class="container" >
+  <view wx:for="{{ratingList}}" wx:key="index" class="item">
+    <i-service-rating   rating="{{item}}" ></i-service-rating>
+  </view>
+</view>

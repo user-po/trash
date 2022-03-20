@@ -1,0 +1,16 @@
+<view class="container">
+    
+         <view 
+            bind:tap="goPublish"
+            class="list-item "
+            wx:for="{{categorySquareList}}"
+            wx:key="key"
+            data-index="{{index}}"
+         >
+            <image mode="aspectFit" class="image" src="{{item.path}}"></image>
+            <view class="desc">
+                {{item.name}}
+            </view>
+         </view>
+  
+</view>

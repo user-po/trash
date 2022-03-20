@@ -1,0 +1,40 @@
+<view class="container" wx:if="{{ order.status === orderStatus.UNAPPROVED }}">
+  <view>
+    <i-button
+      size="long"
+      shape="circle"
+      bind:tap="handleUpdateOrderStatus"
+      data-action="{{ orderAction.AGREE }}"
+      >同意
+    </i-button>
+  </view>
+
+  <view class="deny-button">
+    <i-button
+      size="long"
+      shape="circle"
+      bgColor="red"
+      fontColor="#ffffff"
+      bind:tap="handleUpdateOrderStatus"
+      data-action="{{ orderAction.DENY }}"
+      >拒绝
+    </i-button>
+  </view>
+</view>
+<view class="container" wx:else>
+  <view wx:if="{{ order.status === orderStatus.UNRATED }}">
+    <i-button size="long" shape="circle" bind:tap="handleRating"
+      >评价订单</i-button
+    >
+  </view>
+  <view wx:if="{{ order.status === orderStatus.UNCONFIRMED }}">
+    <i-button
+      size="long"
+      shape="circle"
+      bind:tap="handleUpdateOrderStatus"
+      data-action="{{ orderAction.CONFIRM }}"
+      >确认订单
+    </i-button>
+  </view>
+
+</view>

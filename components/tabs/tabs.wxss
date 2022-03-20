@@ -1,0 +1,46 @@
+/* components/tabs/tabs.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.hide{
+    background-color: #efefef!important;
+    display: none!important;
+}
+.tabs{
+    display: flex;
+    padding: 30rpx 0;
+    background-color:#fff;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    /* height: 126rpx;
+    box-sizing: border-box; */
+}
+.tab-item{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tab-label{
+    color: #888888;
+    white-space: nowrap;
+
+}
+.active-tab{
+    color: #333333;
+    font-weight: bold;
+}
+.divider{
+    margin-top: 10rpx;
+    height: 6rpx;
+    width: 50rpx;
+    background-color: #31b977;
+}
+.tab-panel{
+    flex: 1;
+    margin-top: 30rpx;
+}

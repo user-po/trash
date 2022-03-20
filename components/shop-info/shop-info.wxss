@@ -1,0 +1,29 @@
+.container{
+    margin-left: 20rpx;
+    margin-bottom: 60rpx;    
+    position: relative;
+    top: -70rpx;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.info-item{
+
+    width: 326rpx;
+    height: 134rpx;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+}
+.title{
+    width: 64px;
+    height: 22px;
+    font-size: 16px;
+    color: #666666;
+    font-weight: 500;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+}

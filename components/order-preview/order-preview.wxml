@@ -1,0 +1,26 @@
+<wxs src="/common/wxs/order-status.wxs" module="orderStatus"></wxs>
+<view class="container">
+    <view class="top" wx:if="{{!hideTop}}">
+        <i-avatar
+                shape="circle"
+                size="60"
+                src="{{order[role === roleType.PUBLISHER ? 'consumer':'publisher'].avatar}}"
+                text="{{order[role === roleType.PUBLISHER ? 'consumer':'publisher'].nickname}}"
+        ></i-avatar>
+        <view class="order-status">
+            {{orderStatus.convert(order.status)}}
+        </view>
+    </view>
+    <view class="center">
+        <view class="left">
+            <image class="cover-image" src="{{order.mission_snap.cover_image.path}}"></image>
+        </view>
+        <view class="right">
+            <view class="service-name">{{order.mission_snap.title}}</view>
+            <view class="price">
+                <text>￥</text><text class="price-value">{{order.price}}</text>
+            </view>
+        </view>
+    </view>
+    <slot></slot>
+</view>

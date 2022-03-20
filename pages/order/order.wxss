@@ -1,0 +1,36 @@
+.address {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 160rpx;
+    background-color: #fcedc1;
+    padding: 30rpx 30rpx;
+}
+
+.address-info {
+    margin-left: 20rpx;
+}
+
+.contact-info {
+    margin-top: 10rpx;
+    color: #888888;
+}
+
+.notice-text {
+    margin-left: 20rpx;
+}
+
+.service-card {
+    margin-top: 30rpx;
+}
+
+.action-bar {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    text-align: right;
+    padding: 30rpx 30rpx;
+    width: 100%;
+}

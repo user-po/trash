@@ -1,0 +1,234 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/3/2 下午10:24:01
+使用方法：
+在 D:\homemaking\pages\home\home.wxml 引入模板
+
+```
+<import src="home.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\homemaking\pages\home\home.wxss 中引入样式
+```
+@import "./home.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view is="components/vertical-notice-bar/vertical-notice-bar">
+      <view class="notice-bar--container">
+        <text class="notice-bar--swiper-notice sk-transparent sk-text-18-7500-414 sk-text">公告：</text>
+        <swiper autoplay="false" circular="true" class="notice-bar--swiper-container" interval="4000" vertical="true" current="0">
+          <navigator open-type="navigate">
+            <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0px, 0%) translateZ(0px);">
+              <view class="notice-bar--swiper-item sk-transparent sk-text-18-7500-353 sk-text">加入废旧驿站回收小哥团队才能接单赚钱哦☞</view>
+            </swiper-item>
+          </navigator>
+          <navigator open-type="navigate"></navigator>
+        </swiper>
+      </view>
+    </view>
+    <view class="container">
+      <view is="components/tabs/tabs">
+        <view class="tabs--container">
+          <view>
+            <view is="components/category/category">
+              <view class="category--category">
+                <swiper display-multiple-items="2" next-margin="60rpx" current="0" autoplay="false">
+                  <swiper-item class="category--swiper-item" data-id="0" data-index="0" style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+                    <view class="category--category-swiper-item sk-pseudo sk-pseudo-circle">
+                      <view class="category--triangle" style="border: none;"></view>
+                      <view class="category--img">
+                        <image class="category--image sk-image"></image>
+                      </view>
+                      <text class="category--category-name sk-transparent sk-text-18-7500-564 sk-text" style="background-position-x: 50%;">全部</text>
+                    </view>
+                  </swiper-item>
+                  <swiper-item class="category--swiper-item" data-id="4" data-index="1" style="position: absolute; width: 100%; height: 100%; transform: translate(100%, 0px) translateZ(0px);">
+                    <view class="category--category-swiper-item sk-pseudo sk-pseudo-circle">
+                      <view class="category--triangle" style="border: none;"></view>
+                      <view class="category--img">
+                        <image class="category--image sk-image"></image>
+                      </view>
+                      <text class="category--category-name sk-transparent sk-text-18-7500-435 sk-text" style="background-position-x: 50%;">金属</text>
+                    </view>
+                  </swiper-item>
+                  <swiper-item class="category--swiper-item" data-id="5" data-index="2" style="position: absolute; width: 100%; height: 100%; transform: translate(200%, 0px) translateZ(0px);">
+                    <view class="category--category-swiper-item sk-pseudo sk-pseudo-circle">
+                      <view class="category--triangle" style="border: none;"></view>
+                      <view class="category--img">
+                        <image class="category--image sk-image"></image>
+                      </view>
+                      <text class="category--category-name sk-transparent sk-text-18-7500-673 sk-text" style="background-position-x: 50%;">塑料</text>
+                    </view>
+                  </swiper-item>
+                  <swiper-item class="category--swiper-item" data-id="6" data-index="3" style="position: absolute; width: 100%; height: 100%; transform: translate(300%, 0px) translateZ(0px);">
+                    <view class="category--category-swiper-item sk-pseudo sk-pseudo-circle">
+                      <view class="category--triangle" style="border: none;"></view>
+                      <view class="category--img">
+                        <image class="category--image sk-image"></image>
+                      </view>
+                      <text class="category--category-name sk-transparent sk-text-18-7500-245 sk-text" style="background-position-x: 50%;">电器</text>
+                    </view>
+                  </swiper-item>
+                  <swiper-item class="category--swiper-item" data-id="7" data-index="4" style="position: absolute; width: 100%; height: 100%; transform: translate(400%, 0px) translateZ(0px);">
+                    <view class="category--category-swiper-item sk-pseudo sk-pseudo-circle">
+                      <view class="category--triangle" style="border: none;"></view>
+                      <view class="category--img">
+                        <image class="category--image sk-image"></image>
+                      </view>
+                      <text class="category--category-name sk-transparent sk-text-18-7500-998 sk-text" style="background-position-x: 50%;">旧衣物</text>
+                    </view>
+                  </swiper-item>
+                  <swiper-item class="category--swiper-item" data-id="8" data-index="5" style="position: absolute; width: 100%; height: 100%; transform: translate(500%, 0px) translateZ(0px);"></swiper-item>
+                </swiper>
+              </view>
+            </view>
+          </view>
+          <view class="tabs--tab-panel">
+            <view>
+              <view class="service-preview">
+                <view is="components/service-preview/service-preview" data-service="[object Object]">
+                  <view class="service-preview--container">
+                    <view class="service-preview--left">
+                      <view class="service-preview--type-tag sk-transparent sk-text-18-7500-766 sk-text">
+                        在提供
+                      </view>
+                      <image class="service-preview--cover-image sk-image" mode="aspectFill"></image>
+                    </view>
+                    <view class="service-preview--right">
+                      <view class="service-preview--row">
+                        <view class="service-preview--service-title sk-transparent sk-text-18-7500-257 sk-text">
+                          垃圾回收
+                        </view>
+                        <view class="service-preview--category">
+                          <view is="components/icon/icon">
+                            <view class="icon--iconfont icon--icon-biaoqian sk-pseudo sk-pseudo-circle" style="font-size: 17px;color:#f27013;"></view>
+                          </view>
+                          <view class="service-preview--category-text sk-transparent sk-text-18-7500-478 sk-text">
+                            废纸
+                          </view>
+                        </view>
+                      </view>
+                      <view class="service-preview--row">
+                        <view class="service-preview--publisher">
+                          <view class="service-preview--publisher-avatar">
+                            <image class="service-preview--publisher-avatar-image sk-image"></image>
+                          </view>
+                          <view class="service-preview--publisher-nickname sk-transparent sk-text-18-7500-827 sk-text">
+                            Astheabove
+                          </view>
+                        </view>
+                      </view>
+                      <view class="service-preview--row service-preview--row-last">
+                        <view class="service-preview--create-time sk-transparent sk-text-18-7500-97 sk-text">
+                          2022-02-19
+                        </view>
+                        <view class="sk-transparent sk-text-18-7500-793 sk-text">
+                          10kg
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="service-preview">
+                <view is="components/service-preview/service-preview" data-service="[object Object]">
+                  <view class="service-preview--container">
+                    <view class="service-preview--left">
+                      <view class="service-preview--type-tag sk-transparent sk-text-18-7500-80 sk-text">
+                        在提供
+                      </view>
+                      <image class="service-preview--cover-image sk-image" mode="aspectFill"></image>
+                    </view>
+                    <view class="service-preview--right">
+                      <view class="service-preview--row">
+                        <view class="service-preview--service-title sk-transparent sk-text-18-7500-555 sk-text">
+                          20个塑料瓶
+                        </view>
+                        <view class="service-preview--category">
+                          <view is="components/icon/icon">
+                            <view class="icon--iconfont icon--icon-biaoqian sk-pseudo sk-pseudo-circle" style="font-size: 17px;color:#f27013;"></view>
+                          </view>
+                          <view class="service-preview--category-text sk-transparent sk-text-18-7500-43 sk-text">
+                            塑料
+                          </view>
+                        </view>
+                      </view>
+                      <view class="service-preview--row">
+                        <view class="service-preview--publisher">
+                          <view class="service-preview--publisher-avatar">
+                            <image class="service-preview--publisher-avatar-image sk-image"></image>
+                          </view>
+                          <view class="service-preview--publisher-nickname sk-transparent sk-text-18-7500-38 sk-text">
+                            Astheabove
+                          </view>
+                        </view>
+                      </view>
+                      <view class="service-preview--row service-preview--row-last">
+                        <view class="service-preview--create-time sk-transparent sk-text-18-7500-761 sk-text">
+                          2022-02-21
+                        </view>
+                        <view class="sk-transparent sk-text-18-7500-462 sk-text">
+                          20kg
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="service-preview">
+                <view is="components/service-preview/service-preview" data-service="[object Object]">
+                  <view class="service-preview--container">
+                    <view class="service-preview--left">
+                      <view class="service-preview--type-tag sk-transparent sk-text-18-7500-762 sk-text">
+                        在提供
+                      </view>
+                      <image class="service-preview--cover-image sk-image" mode="aspectFill"></image>
+                    </view>
+                    <view class="service-preview--right">
+                      <view class="service-preview--row">
+                        <view class="service-preview--service-title sk-transparent sk-text-18-7500-694 sk-text">
+                          测试测试测试
+                        </view>
+                        <view class="service-preview--category">
+                          <view is="components/icon/icon">
+                            <view class="icon--iconfont icon--icon-biaoqian sk-pseudo sk-pseudo-circle" style="font-size: 17px;color:#f27013;"></view>
+                          </view>
+                          <view class="service-preview--category-text sk-transparent sk-text-18-7500-212 sk-text">
+                            其它
+                          </view>
+                        </view>
+                      </view>
+                      <view class="service-preview--row">
+                        <view class="service-preview--publisher">
+                          <view class="service-preview--publisher-avatar">
+                            <image class="service-preview--publisher-avatar-image sk-image"></image>
+                          </view>
+                          <view class="service-preview--publisher-nickname sk-transparent sk-text-18-7500-441 sk-text">
+                            Astheabove
+                          </view>
+                        </view>
+                      </view>
+                      <view class="service-preview--row service-preview--row-last">
+                        <view class="service-preview--create-time sk-transparent sk-text-18-7500-424 sk-text">
+                          2022-03-02
+                        </view>
+                        <view class="sk-transparent sk-text-18-7500-359 sk-text">
+                          10-20公斤kg
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view is="components/show-status/show-status"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

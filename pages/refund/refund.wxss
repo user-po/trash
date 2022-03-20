@@ -1,0 +1,47 @@
+.container {
+    font-size: 24rpx;
+    padding-bottom: 200rpx;
+
+}
+
+.address, .service,  .remark {
+    margin-top: 30rpx;
+    background-color: #ffffff;
+    border-radius: 20rpx;
+    padding: 30rpx 30rpx;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+}
+
+.service {
+    padding: 0rpx 0rpx;
+}
+
+.address-info {
+    margin-left: 20rpx;
+}
+
+.contact-info {
+    margin-top: 10rpx;
+    color: #888888;
+}
+
+.order-info{
+    margin-top: 30rpx;
+}
+
+.reason {
+    padding: 10rpx 0;
+}
+
+.form-floor {
+    margin-top: 60rpx;
+    text-align: center;
+}
+
+.reason-textarea {
+    width: 100%;
+}

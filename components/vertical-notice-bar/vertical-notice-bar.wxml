@@ -1,0 +1,12 @@
+<view class="container">
+  <text class='swiper-notice'>公告：</text>
+<swiper class='swiper-container' autoplay='true' vertical='true' circular='true' interval='4000'>
+  <block wx:for='{{msgList}}' wx:key="index">
+    <navigator url='/pages/notice/notice?title={{item.url}}' open-type='navigate'>
+      <swiper-item>
+        <view class='swiper-item'>{{item.title}}</view>
+      </swiper-item>
+    </navigator>
+  </block>
+</swiper>
+</view>

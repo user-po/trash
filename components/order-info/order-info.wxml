@@ -1,0 +1,34 @@
+<wxs src="/common/wxs/order-status.wxs" module="orderStatus"></wxs>
+<view class="container">
+    <view class="row">
+        <view class="label">订单编号</view>
+        <view class="content">{{order.order_no}}</view>
+    </view>
+    <view class="row">
+        <view class="label">订单创建时间</view>
+        <view class="content">{{order.create_time}}</view>
+    </view>
+    <view class="row">
+        <view class="label">废品种类</view>
+        <view class="content">{{order.mission_snap.category.name}}</view>
+    </view>
+    <view class="row">
+        <view class="label">废品重量</view>
+        <view class="content">{{order.mission_snap.weight}}</view>
+    </view>
+    <view class="row address">
+        <view class="label">用户地址</view>
+        <view class="content">{{order.mission_snap.address}}</view>
+    </view>
+    <view class="row">
+        <view class="label">用户联系方式</view>
+        <view class="content">{{order.mission_snap.phone}}</view>
+    </view>
+    <view class="row">
+        <view class="label">订单状态</view>
+        <view class="content order-status">
+            {{orderStatus.convert(order.status)}}
+        </view>
+    </view>
+
+</view>

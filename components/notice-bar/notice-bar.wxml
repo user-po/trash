@@ -1,0 +1,7 @@
+<van-notice-bar
+  left-icon="{{icon}}"
+  text="{{text}}"
+  scrollable 
+  color="{{color}}"
+  background="{{background}}"
+/>

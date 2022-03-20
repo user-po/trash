@@ -1,0 +1,51 @@
+.container {
+    background: #fff;
+    box-sizing: border-box;
+    width: 410rpx;
+    padding: 30rpx 30rpx 0 30rpx;
+    border-radius: 10rpx;
+}
+
+.service {
+    display: flex;
+}
+
+.right {
+    width: 100%;
+    height: 120rpx;
+    margin-left: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cover-image {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 10rpx;
+}
+
+.title {
+    font-size: 24rpx;
+
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+.price {
+    font-size: 24rpx;
+    color: red;
+}
+
+.label {
+    font-size: 16rpx;
+}
+
+.action-bar {
+    margin-top: 20rpx;
+    padding: 20rpx 0;
+    border-top: 1px solid #efefef;
+    text-align: center;
+}

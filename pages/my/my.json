@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#31b977",
+  "navigationBarTitleText": "个人中心",
+  "backgroundColorTop": "#31b977",
+  "usingComponents": {
+    "i-animation-wave":"components/animation-wave/animation-wave"
+  }
+}

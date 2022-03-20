@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-publisher-action": "./components/publisher-action/publisher-action",
+    "i-refund-info": "/components/refund-info/refund-info"
+  }
+}

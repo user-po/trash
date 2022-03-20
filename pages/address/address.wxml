@@ -1,0 +1,10 @@
+<view class="container">
+    <i-show-status show="{{!addressList.length}}" top="220" content="暂时没有地址信息"></i-show-status>
+
+    <i-address-list addressList="{{addressList}}" 
+    bind:edit="handleEditAddress" 
+    bind:delete="handleDeleteAddress"
+    bind:setDefault="handleSetDefault"
+    ></i-address-list>
+    <i-button size="long" shape="circle" bgColor="#31b977" fontColor="#fff" bind:tap="addAddress" class="address-add">+添加地址</i-button>
+</view>

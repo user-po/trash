@@ -1,0 +1,54 @@
+.container {
+    font-size: 28rpx;
+    padding-bottom: 200rpx;
+}
+
+.address, .refund-detail {
+    margin-top: 30rpx;
+    background-color: #ffffff;
+    padding: 30rpx 30rpx;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+}
+
+.address-info {
+    margin-left: 20rpx;
+}
+
+.contact-info {
+    margin-top: 10rpx;
+    color: #888888;
+}
+
+.action-button {
+    margin-top: 80rpx;
+    text-align: center;
+}
+
+.chat, .order-preview, .order-info {
+    margin-top: 30rpx;
+}
+
+.refund-label {
+    font-weight: bold;
+}
+
+.reason-content {
+    margin-top: 30rpx;
+}
+
+.reason-images {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.reason-images image {
+    margin-top: 30rpx;
+    margin-right: 30rpx;
+    width: 200rpx;
+    height: 200rpx;
+}

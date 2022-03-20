@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-service-link": "../service-link/service-link"
+  }
+}

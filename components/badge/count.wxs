@@ -1,0 +1,14 @@
+var countFormat = function (count) {
+    if (count > 99) {
+        return 99
+    }
+
+    if (!count) {
+        return ''
+    }
+    return count
+}
+
+module.exports = {
+    countFormat: countFormat
+}

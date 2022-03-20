@@ -1,0 +1,30 @@
+<view class="container">
+    <view class="time">{{_message.time}}</view>
+    <view class="message-area"
+          style="{{_message.flow === flowEnum.IN ? '' : 'flex-direction:row-reverse'}}">
+        <view class="avatar">
+            <image class="avatar-image" src="{{_message.avatar}}"></image>
+        </view>
+        <view class="content" style="background-color: {{_message.flow === flowEnum.IN ? '#fff':'#f3d066'}}">
+            <block wx:if="{{_message.type === TIM.TYPES.MSG_TEXT}}">
+                {{_message.payload.text}}
+            </block>
+            <block wx:if="{{_message.type === TIM.TYPES.MSG_IMAGE}}">
+                <image src="{{_message.payload.imageInfoArray[1].url}}"
+                       bind:tap="handlePreview"
+                       mode="center"
+                       data-image="{{_message.payload.imageInfoArray[1].url}}"
+                ></image>
+            </block>
+
+            <block wx:if="{{_message.type === TIM.TYPES.MSG_CUSTOM}}">
+                <i-service-link flow="{{_message.flow}}"
+                                extension="{{_message.payload.extension}}"
+                                service="{{_message.payload.description}}"
+                                bind:send="handleSend"
+                                bind:select="handleSelect">
+                </i-service-link>
+            </block>
+        </view>
+    </view>
+</view>

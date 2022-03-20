@@ -1,0 +1,16 @@
+<wxs src="/common/wxs/refund-status.wxs" module="statusConvert"></wxs>
+
+<view class="container">
+    <view class="row">
+        <view class="label">订单编号</view>
+        <view class="content">{{refund.order_no}}</view>
+    </view>
+    <view class="row">
+        <view class="label">订单创建时间</view>
+        <view class="content">{{refund.create_time}}</view>
+    </view>
+    <view class="row">
+        <view class="label">订单状态</view>
+        <view class="content order-status">{{statusConvert.convert(refund.status)}}</view>
+    </view>
+</view>

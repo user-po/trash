@@ -1,0 +1,16 @@
+<i-my-wallet-board money="{{money}}" bind:charge="handleCharge"></i-my-wallet-board>
+<view class="mingxi">
+    <view class="line"></view>
+    <view class="txt">明细</view>
+</view>
+<view class="list">
+   <view class="list-item" wx:for="{{moneyOrderList}}" wx:key="index">
+      <view class="head">
+          <view  class="title">完成支付</view>
+          <view class="action {{item.action==='charge'?'plus':'minus'}}">{{item.action==='charge'?'+':'-'}}{{item.count}}</view>
+      </view>
+      <view  class="time">
+          {{item.create_time}}
+      </view>
+   </view>
+</view>

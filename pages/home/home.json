@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#31b977",
+  "navigationBarTitleText": "任务广场",
+  "enablePullDownRefresh":true,
+  "usingComponents": {
+   
+      "i-category":"../../components/category/category" ,
+      "van-notice-bar": "@vant/weapp/notice-bar/index"
+  }
+}

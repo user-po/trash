@@ -1,0 +1,37 @@
+//js
+  var touchStartX ;
+   function handleTouchStart (e){
+      
+      // 数据绑定 记录触摸开始的X轴
+     touchStartX = e.changedTouches[0].clientX
+    }
+   function handleTouchend (e,ownerInstance){
+      var touchEndX = e.changedTouches[0].clientX
+      //负数代表手指向左滑动 正数代表手指向右滑动了
+      var distance = touchEndX - touchStartX
+      //-1 后退 0 不动 1 前进(左)
+      var direction = 0 ;
+      //向左滑动
+      if(distance < 0 && distance<-70){
+        direction = 1;
+      }
+      if(distance>0 && distance>70){
+         direction =-1;
+      }
+
+      if(direction !==0){
+          //1.触发事件
+          //2.直接调用页面方法
+          ownerInstance.callMethod('hanldeTouchMove',{direction:direction})
+
+      }
+      //结束的位置 - 开始时的位置
+      //改变currentTabIndex的值
+
+      
+    }
+
+    module.exports = {
+       handleTouchStart:handleTouchStart,
+       handleTouchend:handleTouchend
+    }

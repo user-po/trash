@@ -1,0 +1,29 @@
+@import "./publish-preview.skeleton.wxss";
+
+.slide{
+    animation: slideInUp .5s ease-in  1;
+}
+.hot-recycle{
+    position: relative;
+    top: -104rpx;
+    display: flex;
+    justify-content: center;
+}
+.category{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -82rpx;
+}
+.ad{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -70rpx;
+}
+.notice{
+    position: relative;
+    top: -76rpx;
+}
+@keyframes slideInUp{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}

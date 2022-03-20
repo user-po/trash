@@ -1,0 +1,7 @@
+.item{
+  margin-top: 30rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 30rpx 30rpx;
+  margin-bottom: 30rpx;
+}

@@ -1,0 +1,25 @@
+<view class="container">
+    <view class="service">
+        <view class="left">
+            <image class="cover-image" src="{{_service.cover_image.path}}"></image>
+        </view>
+        <view class="right">
+            <view class="title">{{_service.title}}</view>
+            <view class="price">
+                <text class="label">￥</text>{{_service.price}}
+            </view>
+        </view>
+    </view>
+    <view class="action-bar">
+        <i-button wx:if="{{extension === 'link'}}"
+                  size="mini"
+                  shape="circle"
+                  bind:tap="handleSendLink">发送链接
+        </i-button>
+        <i-button wx:else
+                  size="mini"
+                  shape="circle"
+                  bind:tap="handleSelect">查看链接
+        </i-button>
+    </view>
+</view>

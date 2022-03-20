@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "消息列表",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "i-conversation-preview": "components/conversation-preview/conversation-preview"
+  }
+}

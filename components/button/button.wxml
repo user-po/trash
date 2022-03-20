@@ -1,0 +1,29 @@
+<!--  常规按钮  -->
+  <view wx:if="{{!special}}"
+class="i-button i-button-class shape-{{shape}} {{size}} {{plain ? 'plain':''}} {{greenBorder ? 'greenBorder':''}} i-class"
+style="{{width?'max-width:'+width+'rpx;':''}}{{height?'height:'+height+'rpx;'+'line-height:'+height+'rpx;':''}}{{'background-color:'+bgColor+';'}}{{fontColor ? 'color:'+fontColor+';':''}}{{radius? 'border-radius:'+radius+'rpx;':''}}{{border? 'border: 1px solid #efefef;':''}}">
+
+  <i-icon wx:if="{{icon}}" name="{{icon}}" color="{{iconColor}}" style="margin-right:10rpx"/>
+
+  <slot></slot>
+
+</view>
+        <!--  特殊按钮  -->
+
+  <view wx:else class="i-button-special i-button-special-class"
+      style="{{fontColor?'color:'+fontColor+';':''}}">
+
+      <i-icon wx:if="{{icon}}" name="{{icon}}"  color="{{iconColor}}" style="margin-right:10rpx"/>
+    
+      <slot></slot>
+
+</view>
+<!-- <button 
+  id="btn" 
+  
+  open-type="{{openType}}" 
+  bindgetuserinfo="getUserInfo"
+  bindgetphonenumber="getPhonenumber"
+></button> -->
+
+

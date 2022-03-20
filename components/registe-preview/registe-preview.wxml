@@ -1,0 +1,24 @@
+<wxs src="/common/wxs/registe-status.wxs" module="registeStatus"></wxs>
+<view class="container">
+    <view class="top" wx:if="{{!hideTop}}">
+        <i-avatar
+                shape="circle"
+                size="60"
+                src="{{registe.applicant.avatar}}"
+                text="{{registe.applicant.nickname}}"
+        ></i-avatar>
+        <view class="order-status">
+            {{registeStatus.convert(registe.status)}}
+        </view>
+    </view>
+    <view class="center">
+        <view class="right">
+           
+            <view class="price" wx:if="{{registe.message}}">
+                {{registe.message}}
+            </view>
+            <view class="service-name">{{registe.create_time}}</view>
+        </view>
+    </view>
+    <slot></slot>
+</view>

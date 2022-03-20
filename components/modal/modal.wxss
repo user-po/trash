@@ -1,0 +1,62 @@
+
+.mask {
+  position: fixed; 
+  left: 0px; 
+  top: 0px; 
+  width: 100%; 
+  height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.63);
+    z-index: 9999;
+    overflow: hidden;
+
+  }
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10rpx;
+    position: fixed;
+    bottom: 69px;
+  }
+  .main-content {
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .title{
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 28rpx;
+    color: #333;
+    overflow: hidden;
+    background-color: #F8F8F8;
+  }
+  .modal-btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-top: 1rpx solid rgba(7, 17, 27, 0.1);
+  }
+  .cancel-btn, .confirm-btn {
+    flex: 1;
+    padding: 10px;
+    font: 20px "microsoft yahei";
+    text-align: center;
+    border-top: 1px solid #e8e8ea;
+  }
+  .cancel-btn {
+    border-right: 1rpx solid rgba(7, 17, 27, 0.1);
+  }
+  .confirm-btn {
+    color: #3cc51f;
+  }

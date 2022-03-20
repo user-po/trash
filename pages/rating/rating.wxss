@@ -1,0 +1,17 @@
+.container{
+    font-size: 28rpx;
+    padding-bottom: 200rpx;
+}
+
+.order-info{
+    margin-top: 30rpx;
+}
+
+.rating-textarea{
+    width: 100%;
+}
+
+.form-floor{
+    margin-top: 60rpx;
+    text-align: center;
+}

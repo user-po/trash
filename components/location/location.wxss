@@ -1,0 +1,27 @@
+.address {
+    display: flex;
+    align-items: center;
+    
+    box-sizing: border-box;
+    min-height: 167rpx;
+    background-color: white;
+    padding: 30rpx;
+    margin-top: 20rpx
+}
+.to_address{
+   flex:.2;
+}
+.address-info {
+    margin-left: 20rpx;
+    flex:4;
+}
+
+.contact-info {
+    margin-top: 10rpx;
+    color: #888888;
+}
+
+.notice-text {
+    margin-left: 20rpx;
+    flex:4;
+}

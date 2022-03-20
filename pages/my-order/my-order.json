@@ -1,0 +1,10 @@
+{
+ 
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "废旧回收",
+  "usingComponents": {
+    "i-consumer-action": "./components/consumer-action/consumer-action",
+    "i-publisher-action": "./components/publisher-action/publisher-action"
+  }
+  
+}

@@ -1,0 +1,7 @@
+<view class="container">
+   <view class="title">{{title}}</view>
+   <view class="info">
+     <view class="info-item" wx:for="{{shopImageList}}" wx:key="index" style="background-image:url({{item.path}});">
+     </view>
+   </view>
+</view>

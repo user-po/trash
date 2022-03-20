@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="line" wx:if="{{showTopLine}}"></view>
+  <view class="list" >
+    <view class="item {{currentIndex===index?'active':'default'}}" wx:for="{{list}}" wx:key="index" data-index="{{index}}" bind:tap="handleSelect">
+         <view class="left">
+             <view class="title">
+                 {{item.title}}
+             </view>
+             <view class="detail">
+                 {{item.detail}}
+             </view>
+         </view> 
+         <view class="right">
+             <image src="{{item.src}}" class="img">
+                 
+             </image>
+         </view>
+    </view>
+</view>
+</view>

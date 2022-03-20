@@ -1,0 +1,20 @@
+<view class="container">
+     <view 
+       class="item"
+       bind:tap="goWallet"
+    >
+          <view class="detail">
+            <i-icon name="qianbao_o" color="#8799a3"></i-icon>
+               <view>钱包</view>
+          </view>
+     </view>
+     <view 
+      class="item"
+      bind:tap="goAddress"
+      >
+        <view class="detail">
+            <i-icon name="map" color="#8799a3" ></i-icon>
+            <view>地址管理</view>
+       </view>
+     </view>
+</view>

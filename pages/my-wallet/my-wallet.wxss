@@ -1,0 +1,68 @@
+.bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30rpx;
+}
+.mingxi{
+    width: 100%;
+    margin-top: 35rpx;
+    margin-left: 35rpx;
+    display: flex;
+    align-items: center;
+}
+.mingxi .txt{
+    font-size: 15px;
+    color: #666666;
+    margin-left: 15rpx;
+}
+.line{
+    width: 8rpx;
+    height: 28rpx;
+    background-image: linear-gradient(180deg, #8DE4AB 0%, #54C573 100%);
+border-radius: 12px;
+border-radius: 2.5px;
+}
+.list{
+    width: 670rpx;
+    background: #FFFFFF;
+    border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0px 0px;
+    margin: 0 auto;
+    margin-top: 15rpx;
+    
+}
+.list-item{
+   height: 156rpx;
+  border-bottom:1px solid #f1f1f1;
+  padding: 25rpx;
+}
+.head{
+    display: flex;
+}
+.title{
+    font-size: 15px;
+    color: #333;
+    width: 20%;
+}
+.action{
+    width: 80%;
+    text-align: right;
+}
+.plus{
+    color: #54C573;
+}
+.minus{
+    color: #DD4747;
+}
+.time{
+
+    display: flex;
+    height: 100rpx;
+    align-items:flex-end;
+    font-size: 13px;
+    color: #BEBEBE;
+    text-align: right;
+    justify-content: flex-end;
+
+}

@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="font20 bold mb20">富文本解析</view>
+
+  <!-- html文本解析 -->
+  <view class="mb20">
+    <view class="font18 bold mb20">1. html文本解析</view>
+    <wxParse nodes="{{htmlText}}" language="html"></wxParse>
+  </view>
+
+  <!-- markdown文本解析 -->
+  <view class="mb20">
+    <view class="font18 bold mb20">2. markdown文本解析</view>
+    <wxParse nodes="{{mdText}}" language="md"></wxParse>
+  </view>
+
+  <!-- 代码高亮 -->
+  <view class="mb20">
+    <view class="font18 bold mb20">3. markdown文本高亮解析</view>
+    <highLight codeText="{{codeText}}"></highLight>
+  </view>
+</view>
