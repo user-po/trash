@@ -5,10 +5,8 @@
 ## 项目展示
 [![v1ts1g.jpg](https://s1.ax1x.com/2022/08/09/v1ts1g.jpg)](https://imgtu.com/i/v1ts1g=100×200)
 [![v1tgns.jpg](https://s1.ax1x.com/2022/08/09/v1tgns.jpg)](https://imgtu.com/i/v1tgns)
-[![v1t6Xj.jpg](https://s1.ax1x.com/2022/08/09/v1t6Xj.jpg)](https://imgtu.com/i/v1t6Xj)
 [![v1tr9S.jpg](https://s1.ax1x.com/2022/08/09/v1tr9S.jpg)](https://imgtu.com/i/v1tr9S)
-[![v1tBh8.jpg](https://s1.ax1x.com/2022/08/09/v1tBh8.jpg)](https://imgtu.com/i/v1tBh8)
-[![v1tycQ.png](https://s1.ax1x.com/2022/08/09/v1tycQ.png)](https://imgtu.com/i/v1tycQ)
+
 
 ## 技术栈
 + 框架：原生微信小程序+Vue+Vuex+Vue-router+AntDesign+nodejs+koa2+mongodb+nginx
